@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         println("view did load")
+        self.loginFormView.alpha = 0
         self.loginFormView.frame.origin.y = 400
 
         // Do any additional setup after loading the view.
@@ -27,8 +28,9 @@ class LoginViewController: UIViewController {
         
         
         
-        UIView.animateWithDuration(0.35, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 2, options: nil, animations: { () -> Void in
+        UIView.animateWithDuration(0.35, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1.5, options: nil, animations: { () -> Void in
             self.loginFormView.frame.origin.y = 175
+            self.loginFormView.alpha = 1
             }) { (Finished: Bool) -> Void in
                 println("test")
             self.emailField.becomeFirstResponder()

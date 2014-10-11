@@ -11,6 +11,7 @@ import UIKit
 class ComposeViewController: UIViewController {
 
     
+    
     @IBOutlet weak var textButton: UIButton!
     
     @IBOutlet weak var photoButton: UIButton!
@@ -26,14 +27,16 @@ class ComposeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         actionsView.center.x = view.center.x
-        actionsView.center.y = 470
+        actionsView.center.y = 650
+        
+       
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(animated: Bool) {
         
         
-        UIView.animateWithDuration(0.15, delay: 0, options: nil, animations: { () -> Void in
+        UIView.animateWithDuration(0.2, delay: 0, options: nil, animations: { () -> Void in
             self.actionsView.center.y = 250
             }) { (Finished:Bool) -> Void in
                 UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: nil, animations: { () -> Void in
@@ -82,14 +85,14 @@ class ComposeViewController: UIViewController {
             self.photoButton.center.x = -100
             self.chatButton.center.x = 420
             }) { (Finished: Bool) -> Void in
-                //
+               self.dismissViewControllerAnimated(true, completion: nil)
         }
         
         UIView.animateWithDuration(0.2, delay: 0.2, options: nil, animations: { () -> Void in
             self.quoteButton.center.x = -100
             self.linkButton.center.x = 420
             }) { (Finished: Bool) -> Void in
-                self.dismissViewControllerAnimated(true, completion: nil)
+                //self.dismissViewControllerAnimated(true, completion: nil)
         }
     }
 }
