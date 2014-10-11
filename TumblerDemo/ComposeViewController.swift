@@ -10,12 +10,73 @@ import UIKit
 
 class ComposeViewController: UIViewController {
 
+    
+    @IBOutlet weak var textButton: UIButton!
+    
+    @IBOutlet weak var photoButton: UIButton!
+    @IBOutlet weak var quoteButton: UIButton!
+    @IBOutlet weak var linkButton: UIButton!
+    
+    @IBOutlet weak var videoButton: UIButton!
+    @IBOutlet weak var chatButton: UIButton!
+    
+    @IBOutlet weak var actionsView: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        actionsView.center.x = view.center.x
+        actionsView.center.y = 470
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        
+        UIView.animateWithDuration(0.15, delay: 0, options: nil, animations: { () -> Void in
+            self.actionsView.center.y = 250
+            }) { (Finished:Bool) -> Void in
+                UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: nil, animations: { () -> Void in
+                    
+                    self.textButton.frame.origin = CGPoint(x: 23, y: 35)
+                    self.photoButton.frame.origin = CGPoint(x: 123, y: 35)
+                    self.quoteButton.frame.origin = CGPoint(x: 223, y: 35)
+                    self.linkButton.frame.origin = CGPoint(x: 23, y: 150)
+                    self.chatButton.frame.origin = CGPoint(x: 123, y: 150)
+                    self.videoButton.frame.origin = CGPoint(x: 223, y: 150)
+                    
+                    }) { (Finished: Bool) -> Void in
+                        //
+                }
 
+        }
+        
+        /*
+        UIView.animateWithDuration(0.15, delay: 0.1, animations: { () -> Void in
+            self.actionsView.center.y = 250
+            }) { (Finished: Bool) -> Void in
+                //
+                
+                UIView.animateWithDuration(0.2, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.1, options: nil, animations: { () -> Void in
+                    
+                    self.textButton.frame.origin = CGPoint(x: 23, y: 35)
+                    self.photoButton.frame.origin = CGPoint(x: 123, y: 35)
+                    self.quoteButton.frame.origin = CGPoint(x: 223, y: 35)
+                    self.linkButton.frame.origin = CGPoint(x: 23, y: 150)
+                    self.chatButton.frame.origin = CGPoint(x: 123, y: 150)
+                    self.videoButton.frame.origin = CGPoint(x: 223, y: 150)
+                    
+                    }) { (Finished: Bool) -> Void in
+                        //
+                }
+                
+                
+        }
+        */
+        
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

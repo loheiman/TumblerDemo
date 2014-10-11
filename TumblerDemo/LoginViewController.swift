@@ -10,8 +10,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var emailField: UITextField!
     
-    @IBOutlet weak var emailField: UILabel!
+   
     @IBOutlet weak var loginFormView: UIView!
     @IBOutlet weak var loginForm: UIImageView!
     override func viewDidLoad() {
@@ -23,21 +24,15 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidAppear(animate: Bool) {
-        println("viewdid appear")
-        
         
         UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 2, options: nil, animations: { () -> Void in
-            self.loginFormView.frame.origin.y = 200
+            self.loginFormView.frame.origin.y = 175
             }) { (Finished: Bool) -> Void in
-           //  emailField.becomeFirstResponder()
+                println("test")
+            self.emailField.becomeFirstResponder()
         }
-        
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func cancelButton(sender: AnyObject) {
         UIView.animateWithDuration(0.2, animations: { () -> Void in
@@ -45,17 +40,12 @@ class LoginViewController: UIViewController {
             }) { (Finished:Bool) -> Void in
             self.dismissViewControllerAnimated(true , completion: nil)
         }
-        
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-    */
-
+    
 }

@@ -18,7 +18,6 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
     
     var homeViewController : UIViewController!
     var searchViewController : UIViewController!
-   // var composeViewController : UIViewController!
     var accountViewController : UIViewController!
     var trendingViewController : UIViewController!
 
@@ -31,7 +30,6 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
         homeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController") as UIViewController
         searchViewController = storyboard.instantiateViewControllerWithIdentifier("SearchViewController") as UIViewController
-      //  composeViewController = storyboard.instantiateViewControllerWithIdentifier("ComposeViewController") as UIViewController
         accountViewController = storyboard.instantiateViewControllerWithIdentifier("AccountViewController") as UIViewController
         trendingViewController = storyboard.instantiateViewControllerWithIdentifier("TrendingViewController") as UIViewController
         
@@ -59,15 +57,23 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
         case 1:
             contentView.addSubview(homeViewController.view)
             homeViewController.view.frame = contentView.frame
+            self.addChildViewController(homeViewController)
+            homeViewController.didMoveToParentViewController(self)
         case 2:
             contentView.addSubview(searchViewController.view)
             searchViewController.view.frame = contentView.frame
+            self.addChildViewController(searchViewController)
+            searchViewController.didMoveToParentViewController(self)
         case 4:
             contentView.addSubview(accountViewController.view)
             accountViewController.view.frame = contentView.frame
+            self.addChildViewController(accountViewController)
+            accountViewController.didMoveToParentViewController(self)
         case 5:
             contentView.addSubview(trendingViewController.view)
             trendingViewController.view.frame = contentView.frame
+            self.addChildViewController(trendingViewController)
+            trendingViewController.didMoveToParentViewController(self)
         default:
             println("no case found")
         }
@@ -96,7 +102,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
         // The value here should be the duration of the animations scheduled in the animationTransition method
-        return 0.4
+        return 0.25
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -108,13 +114,13 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
         if (isPresenting) {
             containerView.addSubview(toViewController.view)
             toViewController.view.alpha = 0
-            UIView.animateWithDuration(0.4, animations: { () -> Void in
+            UIView.animateWithDuration(0.25, animations: { () -> Void in
                 toViewController.view.alpha = 1
                 }) { (finished: Bool) -> Void in
                     transitionContext.completeTransition(true)
             }
         } else {
-            UIView.animateWithDuration(0.4, animations: { () -> Void in
+            UIView.animateWithDuration(0.25, animations: { () -> Void in
                 fromViewController.view.alpha = 0
                 }) { (finished: Bool) -> Void in
                     transitionContext.completeTransition(true)
