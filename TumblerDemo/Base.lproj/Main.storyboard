@@ -242,6 +242,7 @@
                         <outlet property="actionsView" destination="tlF-UQ-LzH" id="9cM-lj-gzL"/>
                         <outlet property="chatButton" destination="s6F-ay-lhZ" id="64a-us-HOl"/>
                         <outlet property="linkButton" destination="k2C-Ag-hAs" id="1jA-W5-qfE"/>
+                        <outlet property="nevermindImageView" destination="21f-Yb-Mn6" id="w2Z-jh-Px8"/>
                         <outlet property="photoButton" destination="a1k-i8-mF3" id="Hyv-mk-Y6k"/>
                         <outlet property="quoteButton" destination="CdR-4a-n9V" id="w5e-zq-InH"/>
                         <outlet property="textButton" destination="gph-r8-aha" id="nHT-7A-pw4"/>

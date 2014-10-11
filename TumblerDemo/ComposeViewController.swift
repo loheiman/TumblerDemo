@@ -12,6 +12,7 @@ class ComposeViewController: UIViewController {
 
     
     
+    @IBOutlet weak var nevermindImageView: UIImageView!
     @IBOutlet weak var textButton: UIButton!
     
     @IBOutlet weak var photoButton: UIButton!
@@ -77,6 +78,7 @@ class ComposeViewController: UIViewController {
         UIView.animateWithDuration(0.2, delay: 0, options: nil, animations: { () -> Void in
             self.textButton.center.x = -100
             self.videoButton.center.x = 420
+            self.nevermindImageView.alpha = 0
             }) { (Finished: Bool) -> Void in
                 //
         }
@@ -86,6 +88,7 @@ class ComposeViewController: UIViewController {
             self.chatButton.center.x = 420
             }) { (Finished: Bool) -> Void in
                self.dismissViewControllerAnimated(true, completion: nil)
+                
         }
         
         UIView.animateWithDuration(0.2, delay: 0.2, options: nil, animations: { () -> Void in
