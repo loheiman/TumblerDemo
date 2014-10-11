@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A7629D02-4FE5-4AD1-A058-34F1F832129F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TumblerDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>15D8BDA1F41247EE26C238140C1185F5C6774D2A</key>
+		<string>https://github.com/loheiman/TumblerDemo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TumblerDemo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>15D8BDA1F41247EE26C238140C1185F5C6774D2A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/loheiman/TumblerDemo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>15D8BDA1F41247EE26C238140C1185F5C6774D2A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>15D8BDA1F41247EE26C238140C1185F5C6774D2A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TumblerDemo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

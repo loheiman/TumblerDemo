@@ -18,7 +18,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
     
     var homeViewController : UIViewController!
     var searchViewController : UIViewController!
-    var composeViewController : UIViewController!
+   // var composeViewController : UIViewController!
     var accountViewController : UIViewController!
     var trendingViewController : UIViewController!
 
@@ -31,7 +31,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
         homeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController") as UIViewController
         searchViewController = storyboard.instantiateViewControllerWithIdentifier("SearchViewController") as UIViewController
-        composeViewController = storyboard.instantiateViewControllerWithIdentifier("ComposeViewController") as UIViewController
+      //  composeViewController = storyboard.instantiateViewControllerWithIdentifier("ComposeViewController") as UIViewController
         accountViewController = storyboard.instantiateViewControllerWithIdentifier("AccountViewController") as UIViewController
         trendingViewController = storyboard.instantiateViewControllerWithIdentifier("TrendingViewController") as UIViewController
         
@@ -74,6 +74,8 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
     }
     
     
+    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         var destinationVC = segue.destinationViewController as UIViewController
         destinationVC.modalPresentationStyle = UIModalPresentationStyle.Custom
@@ -89,6 +91,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
     func animationControllerForDismissedController(dismissed: UIViewController!) -> UIViewControllerAnimatedTransitioning! {
         isPresenting = false
         return self
+        
     }
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
