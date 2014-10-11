@@ -51,28 +51,6 @@ class ComposeViewController: UIViewController {
 
         }
         
-        /*
-        UIView.animateWithDuration(0.15, delay: 0.1, animations: { () -> Void in
-            self.actionsView.center.y = 250
-            }) { (Finished: Bool) -> Void in
-                //
-                
-                UIView.animateWithDuration(0.2, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.1, options: nil, animations: { () -> Void in
-                    
-                    self.textButton.frame.origin = CGPoint(x: 23, y: 35)
-                    self.photoButton.frame.origin = CGPoint(x: 123, y: 35)
-                    self.quoteButton.frame.origin = CGPoint(x: 223, y: 35)
-                    self.linkButton.frame.origin = CGPoint(x: 23, y: 150)
-                    self.chatButton.frame.origin = CGPoint(x: 123, y: 150)
-                    self.videoButton.frame.origin = CGPoint(x: 223, y: 150)
-                    
-                    }) { (Finished: Bool) -> Void in
-                        //
-                }
-                
-                
-        }
-        */
         
         
     }
@@ -93,7 +71,25 @@ class ComposeViewController: UIViewController {
     }
     */
     @IBAction func onNevermindButton(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+        UIView.animateWithDuration(0.2, delay: 0, options: nil, animations: { () -> Void in
+            self.textButton.center.x = -100
+            self.videoButton.center.x = 420
+            }) { (Finished: Bool) -> Void in
+                //
+        }
+        
+        UIView.animateWithDuration(0.2, delay: 0.1, options: nil, animations: { () -> Void in
+            self.photoButton.center.x = -100
+            self.chatButton.center.x = 420
+            }) { (Finished: Bool) -> Void in
+                //
+        }
+        
+        UIView.animateWithDuration(0.2, delay: 0.2, options: nil, animations: { () -> Void in
+            self.quoteButton.center.x = -100
+            self.linkButton.center.x = 420
+            }) { (Finished: Bool) -> Void in
+                self.dismissViewControllerAnimated(true, completion: nil)
+        }
     }
-
 }

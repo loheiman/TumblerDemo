@@ -20,7 +20,7 @@ class SearchViewController: UIViewController {
         var images = UIImage.animatedImageNamed("loading-", duration: 1)
         loadingAnimationImageView.image = images
         
-        delay(1.25) {
+        delay(1) {
             self.searchFeedImageView.hidden = false
             self.loadingAnimationImageView.hidden = true
         }

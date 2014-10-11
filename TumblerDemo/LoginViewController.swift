@@ -25,7 +25,9 @@ class LoginViewController: UIViewController {
     
     override func viewDidAppear(animate: Bool) {
         
-        UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 2, options: nil, animations: { () -> Void in
+        
+        
+        UIView.animateWithDuration(0.35, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 2, options: nil, animations: { () -> Void in
             self.loginFormView.frame.origin.y = 175
             }) { (Finished: Bool) -> Void in
                 println("test")
