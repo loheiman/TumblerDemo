@@ -79,6 +79,10 @@
                                             <segue destination="iRX-IN-Gtl" kind="modal" identifier="composeSegue" id="sjA-mx-6ai"/>
                                         </connections>
                                     </button>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="explore_popup" id="QFe-0L-O9R">
+                                        <rect key="frame" x="2" y="-61" width="185" height="77"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.19607843137254902" green="0.25882352941176467" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -90,6 +94,7 @@
                         <outlet property="accountButton" destination="efH-jA-WIU" id="rYW-M6-O8y"/>
                         <outlet property="composeButton" destination="Kae-vR-2uj" id="giM-BJ-bsj"/>
                         <outlet property="contentView" destination="rpk-Zn-tPu" id="6Fa-te-FaU"/>
+                        <outlet property="explorePopupImageView" destination="QFe-0L-O9R" id="jV7-7T-cQa"/>
                         <outlet property="homeButton" destination="a8d-4c-aj5" id="s5j-LT-Ylk"/>
                         <outlet property="searchButton" destination="ajB-nl-SE1" id="6CK-3e-bH4"/>
                         <outlet property="trendingButton" destination="mcK-J2-H8n" id="XOV-Jw-2am"/>
@@ -358,6 +363,7 @@
         <image name="account_selected_icon" width="35" height="35"/>
         <image name="chat_icon" width="75" height="96"/>
         <image name="compose_button" width="50" height="35"/>
+        <image name="explore_popup" width="185" height="77"/>
         <image name="home" width="320" height="524"/>
         <image name="home_icon" width="35" height="35"/>
         <image name="home_overlay" width="320" height="100"/>

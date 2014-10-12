@@ -16,6 +16,9 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
     @IBOutlet weak var accountButton: UIButton!
     @IBOutlet weak var trendingButton: UIButton!
     
+    @IBOutlet weak var explorePopupImageView: UIImageView!
+    
+    
     var homeViewController : UIViewController!
     var searchViewController : UIViewController!
     var accountViewController : UIViewController!
@@ -34,6 +37,14 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
         trendingViewController = storyboard.instantiateViewControllerWithIdentifier("TrendingViewController") as UIViewController
         
         onTabSelect(homeButton)
+        
+        self.explorePopupImageView.frame.origin.y = -61
+        
+        UIView.animateWithDuration(0.8, delay: 0, options: UIViewAnimationOptions.Autoreverse | UIViewAnimationOptions.Repeat, animations: { () -> Void in
+            self.explorePopupImageView.frame.origin.y = -65
+            }) { (Finished: Bool) -> Void in
+            //
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -64,6 +75,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
             searchViewController.view.frame = contentView.frame
             self.addChildViewController(searchViewController)
             searchViewController.didMoveToParentViewController(self)
+            explorePopupImageView.hidden = true
         case 4:
             contentView.addSubview(accountViewController.view)
             accountViewController.view.frame = contentView.frame

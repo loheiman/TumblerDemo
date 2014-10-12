@@ -14,11 +14,9 @@ class ComposeViewController: UIViewController {
     
     @IBOutlet weak var nevermindImageView: UIImageView!
     @IBOutlet weak var textButton: UIButton!
-    
     @IBOutlet weak var photoButton: UIButton!
     @IBOutlet weak var quoteButton: UIButton!
     @IBOutlet weak var linkButton: UIButton!
-    
     @IBOutlet weak var videoButton: UIButton!
     @IBOutlet weak var chatButton: UIButton!
     
