@@ -15,6 +15,23 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /*
+        searchFeedImageView.hidden = true
+        
+        var images = UIImage.animatedImageNamed("loading-", duration: 1)
+        loadingAnimationImageView.image = images
+        
+        delay(1) {
+            self.searchFeedImageView.hidden = false
+            self.loadingAnimationImageView.hidden = true
+        }
+        
+        */
+
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         searchFeedImageView.hidden = true
         
         var images = UIImage.animatedImageNamed("loading-", duration: 1)
@@ -25,7 +42,7 @@ class SearchViewController: UIViewController {
             self.loadingAnimationImageView.hidden = true
         }
 
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
